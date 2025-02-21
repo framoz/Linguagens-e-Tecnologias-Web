@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+    <form method="get">
+        <fieldset>
+            <legend>Form</legend>
+            <label>Name</label>
+            <input type="text" required>
+            <br>
+            <label>Age</label>
+            <input type="radio" name="age" value="&lt;18" checked>&lt;18
+            <input type="radio" name="age" value="19-39">19-39
+            <input type="radio" name="age" value="36-48">36-48
+            <input type="radio" name="age" value="&gt;49">&gt;49
+            <br>
+            <label>Profession</label>
+            <input name="profession" list="professions" value="Unemployed">
+            <datalist id="professions">
+                <option value="Engineer">Engineer</option>
+                <option value="Pilot">Pilot</option>
+                <option value="Physician">Physician</option>
+                <option value="Unemployed">Unemployed</option>
+            </datalist>
+            <br>
+            <label>Country</label>
+            <select name="country" id="country" required>
+                <option value="" disabled selected>Select your country</option>
+                <optgroup label="Americas">
+                    <option value="Brazil">Brazil</option>
+                    <option value="USA">USA</option>
+                </optgroup>
+                <optgroup label="Europe">
+                    <option value="Portugal">Portugal</option>
+                </optgroup>
+                <optgroup label="Africa">
+                    <option value="Senegal">Senegal</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="Swaziland">Swaziland</option>
+                </optgroup>
+            </select>
+
+            <br>
+            <label>Interests</label>
+
+            <input type="checkbox" name="interests[]" value="Cars"> Cars
+            <input type="checkbox" name="interests[]" value="Boats"> Boats
+            <input type="checkbox" name="interests[]" value="Planes"> Planes
+            <input type="checkbox" name="interests[]" value="Motorcycles"> Motorcycles
+
+            <br>
+            <label>How did you find out about the site?</label><br><textarea name="source" rows="6"
+                cols="40"></textarea>
+            <br>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>
