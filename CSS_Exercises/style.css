@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script');
+@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson-Pro');
+
+header>h1 {
+    font-family: 'Imperial Script', cursive;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 200px;
+    color: #333333;
+}
+
+h2 {
+    font-family: 'Ruda';
+    text-align: right;
+    font-weight: normal;
+    font-size: 50px;
+    border-bottom: solid #333333;
+}
+
+section h3 {
+    font-family: 'Crimson-Pro', sans-serif;
+    font-weight: bold;
+}
+
+section p,
+li {
+    font-family: 'Crimson-Pro', sans-serif;
+}
+
+.beige-square {
+    background-color: #f7ede2;
+    width: 60em;
+    max-width: 100%;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.red-info {
+    background-color: #f5cac3;
+    padding: 10px;
+    border: dotted #f28482;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: 10px solid #f28482;
+
+}
