@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+This is a regular HTML file (not PHP).
+It declares a simple form that will send data to our PHP script.
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Calculator Form</title>
+</head>
+<body>
+    <h1>Sum Calculator</h1>
+    
+    <!-- 
+    FORM EXPLANATION:
+    - <form> element defines an HTML form
+    - action="sum2.php" tells the browser where to send the form data (which file will process it)
+    - method="GET" specifies that form data should be sent as URL parameters
+      (e.g., sum2.php?num1=5&num2=10)
+    - If we used method="POST", the data would be sent in the HTTP request body instead
+      and we would access it with $_POST['num1'] in PHP
+    -->
+    <form action="sum2.php" method="GET">
+        <div>
+            <!-- 
+            Label elements improve accessibility and UX by associating text with input fields
+            The 'for' attribute connects the label to the input field with matching 'id'
+            -->
+            <label for="num1">First Number:</label>
+            
+            <!-- 
+            Input field for the first number:
+            - type="number" makes this accept only numeric input (and shows up/down arrows)
+            - id="num1" connects this input to its label
+            - name="num1" is the parameter name that will be sent to PHP ($_GET['num1'])
+            - required makes this field mandatory (form can't be submitted without a value)
+            -->
+            <input type="number" id="num1" name="num1" required>
+        </div>
+        
+        <div style="margin-top: 10px;">
+            <label for="num2">Second Number:</label>
+            <input type="number" id="num2" name="num2" required>
+        </div>
+        
+        <div style="margin-top: 20px;">
+            <!-- 
+            Submit button:
+            - type="submit" makes this button submit the form when clicked
+            - When clicked, the browser collects all form inputs and sends them to sum2.php
+            -->
+            <button type="submit">Calculate Sum</button>
+        </div>
+    </form>
+</body>
+</html>
